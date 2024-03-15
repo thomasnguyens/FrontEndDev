@@ -47,7 +47,7 @@ a:clicked{
 }
 
 .backgroundpic{
-    background-image: url('./thomasnguyens.github.io/blob/main/images/catalinapic.JPG');
+    background-image: url('./images/catalinapic.JPG');
     background-size: cover; /* allows you to cover entire page */
     background-position: center;
     background-repeat: no-repeat;
