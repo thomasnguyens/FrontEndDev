@@ -4,14 +4,12 @@ section{
     margin: 20px;
 }
 
-
+.nav-link.active{
+    text-decoration: underline;
+}
 
 h1, h2{
     color: #333;
-}
-
-p {
-    font-family: sans-serif
 }
 
 footer{
@@ -19,18 +17,12 @@ footer{
 }
 
 header{
-    border: 0.5px solid rgba(18, 151, 200, 0.648);
-    background-color: rgba(84, 141, 161, 0.943);
-    padding-bottom: 25px;
-    text-align: left;
-    font-family: orpheus-pro;
+    font-family: verdana;
+    
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: lightblue;
+#theme{
+    background-color: rgba(84, 141, 161, 0.943);
 }
 
 a:link, a:visited{
@@ -52,69 +44,13 @@ a:clicked{
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100vw; /* 100 viewport width */
-}
-
-.project{
-    width: 200px; /*square dimensions */
-    height: 200px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    display: inline-block; /* aligns containers side-by-side */
-    text-align: center;
-    line-height: 200px; /* vertically centers text */
-}
-
-#portfoliotitle{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    background-color: rgba(116, 225, 225, 0.653);
-}
-
-#profile-pic{
-    width: 150px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%; /*rounded border */
-}
-
-#cover-logo{
-    margin-left: 30px;
-    margin-top: 20px;
-    display: flex;
+    /* width: 100vw; /* 100 viewport width */
 }
 
 
-#bio, #work{
-    background-color: #e9e9e9;
-    padding: 15px;
-}
 
-#portfoliolinks{
-    text-align: center;
-}
 
-#coverlinks{
-    padding-left: 40px;
-    font-family: verdana;
-    font-size: medium;
-}
-
-#covertitle{
-    border: 1px solid rgb(40, 52, 56);
-    border-radius: 50%;
-    width: 70px;
-    height: 60px;
-    text-align: center;
-    margin-left: 30px;
-}
-
-#logo-nav{ /* ensures items are aligned properly */
-    display: flex;
-    align-items: center;
-}
-
+/* probably need to fix boxmodel, border1 */
 #boxmodel {
     background-color:rgba(25, 181, 238, 0.795);
     border: 3px solid rgba(93, 131, 141, 0.82);
