@@ -43,9 +43,9 @@
                             Projects
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./gis-projects.html">GIS Projects</a></li>
-                            <li><hr class="dropdown-divider"></li> <!-- adds a horizontal divider in between-->
                             <li><a class="dropdown-item" href="./tech-projects.html">Technical Projects</a></li>
+                            <li><hr class="dropdown-divider"></li> <!-- adds a horizontal divider in between-->
+                            <li><a class="dropdown-item" href="./gis-projects.html">GIS Projects</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -54,10 +54,10 @@
     </nav>
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <div class="container my-5">
-            <h2 id="about"><b>About Me!</b></h2><hr>
+            <div class="display-5" id="about">ABOUT ME</div><hr>
             <div class="row">
                 <div class="col-sm-8">
-                    <h1 class="display-4"> Thomas Nguyen</h1>
+                    <h1> Thomas Nguyen</h1>
                     <p> <b>Career Objective: </b> A recent UC Santa Barbara graduate that majored in Geography with an emphasis in GIS. As a GIS major, I am fascinated by the collection, analysis and management of geographical data and the important role they play across technology, data analysis, and environmental sciences many of which align with my interests. I demonstrate outstanding proficiency in working collaboratively with others in order to curate innovative solutions to complex problems. I am enthusiastic about utilizing my skills and experiences to larger corporations where I will bring in significant impact.</p>
                 </div>
                 <div class="col-md-2">
@@ -67,7 +67,7 @@
         </div>
         </div>
         <div class="container my-5"> <!--Skills-->
-            <h2 id="skills"><b>Skills</b></h2><hr>
+            <div class="display-5" id="skills">SKILLS</div><hr>
             <p>
                 <b><u>TECHNICAL: </u></b><br>
                 <ul>
@@ -112,131 +112,6 @@
                 </ul>
             </p>
         </div>
-        <div class="container my-5"> <!-- Projects-->
-            <h2 id="projects"><b>Projects</b></h2><hr>
-            <div class="row">
-                <div class="col-auto">
-                    <ol>
-                        <h3><li>Investigating the spatio-temporal patterns of wildfires in California</h3></li> <!-- Project 1-->
-                        <i>Using ArcGis</i>
-                        <ul>
-                            <li><b>Goal: </b>Find relationship between fire perimeters and bodies of water in Los Anglees County</li>
-                            <li><b>Datasets Used: </b></li>
-                            <ul>
-                                <li>Wildland-Urban Interface 2020 (Census Block-level WUI data of LA County), Fire Perimeter data, California Counties Population Data, Primary Roads in CA</li>
-                            </ul>
-                            <li><b>Methodology + Analysis: </b></li>
-                            <ul>
-                                <li>Select by Location</li>
-                                <li>find intersection between” California_Fires_Perimeter” layer and “LA_county” layer → add selected features to new layer on map</li>
-                                <li>Load shapefiles for California Major Rivers and Creeks and California Major Lakes and Reservoirs</li>
-                                <li>Add topographic base map and surrounding counties to make chosen county stand out</li>
-                            </ul>
-                            <li><b>Result:</b></li>
-                            <ul>
-                                <li>Fires do fall along various rivers and creeks in LA but mostly around San Gabriel Mountains</li>
-                            </ul>
-                        </ul>
-                        <div>
-                            [insert image about investigating spatio-temporal here]
-                        </div><br>
-                        <h3><li>Modeling Tiger Habitats</h3></li> <!-- Project 2-->
-                        <i>Using ArcGis</i>
-                        <ul>
-                            
-                            <li><b>Goal: </b>Find portions of protected areas, having the best environment to support tigers</li>
-                            <li><b>Datasets Used: </b></li>
-                            <ul>
-                                <li>Boundary, Protect, roads, forest, DEM (76 SRTM 1 Arc-SEcond digital elevation model images within Thailand), Mammals</li>
-                            </ul>
-                            <li><b>Methodology + Analysis: </b></li>
-                            <ul>
-                                <li><i>Needed to fulfill 5 criterion:</i></li>
-                                <ol>
-                                    <li>Suitable habitat <b><u>cannot be within 1km</u></b> of a road</li>
-                                    <li>Suitable Habitat area must have <b><u>following combination of preys:</u></b></li>
-                                    <ol type ="a">
-                                        <li>1+ of Sambar or Eld_Deer</li>
-                                        <li> Also must not have more than 1 Gaur</li>
-                                    </ol>
-                                    <li>The roundness of suitable habitat area(s) <b><u>should be less than 1800.</u></b> (Roundness = ratio of area to perimeter or area/perimeter)</li>
-                                    <li>Slope of suitable habitat area(s) <b><u>should be less than 30˚</u></b></li>
-                                </ol>
-                            </ul>
-                            <li><b>GIS Tools Utilized: </b></li>
-                            <ul>
-                                <li><b>[criterion 1]</b> Buffer tool for each road and erasing the zone from the protected area</li>
-                                <li><b>[criterion 2]</b> Select-by-attribute to select only the forest polygons of suitable vegetation types (4 mentioned earlier)
-                                <ul>
-                                    <li>Intersect tool also used to get the portion vegetation types are suitable in criterion 1 and forest</li>
-                                </ul></li>
-                                <li><b>[criterion 3]</b>‘Add join` tool to add information in ‘mammals’ table to ‘protect layer’ [since they both share the same unique Protect_ID]
-                                <ul>
-                                    <li>In new layer select features where sambar or eld_deer is 1 or more</li>
-                                    <li>Use intersect to get only data within criterion 2 and info specified above</li>
-                                </ul></li>
-                                <li><b>[criterion 4]</b>New column is made ‘Roundness’ and then ‘calculate field’ tool used to select features with roundness less than 1800 → select-by-attribute </li>
-                                <li><b>[criterion 5]</b>Mosaic Dataset and add necessary rasters to it → generate slope with slope tool → extract cells w/ slope value less than 30 with Raster Calculator → 
-                                    convert raster to polygon → intersect tool with criterion 4 and selected slope polygons</li>
-                            </ul>
-                            <div class="container text-center">
-                                <figure class="figure">
-                                <img class="img-resize rounded" src="./images/project-imgs/tiger.jpg" alt="tiger.jpg" width="50%">
-                                </figure>
-                            </div><br>
-                            <li><b>Result:</b></li>
-                            <ul>
-                                <li>25 features meet all 5 criteria. Tigers are found in mixed deciduous forests out of any forests in Thailand due to resources that forests provide which 
-                                    can’t be found anywhere else.</li>
-                            </ul>
-                        </ul>
-                        <h3><li>Trade and Service Area Analysis of Santa Maria County Gas Stations</h3></li> <!--Project 3-->
-                        <i>Using ArcGis</i>
-                        <ul>
-                            <li><b>Goal: </b>Find equal competition trade areas for gas stations in santa barbara</li>
-                            <li><b>Datasets Used: </b></li>
-                            <ul>
-                                <li>SMC Census Block 2010</li>
-                                <li>Gas Station Location Coordinates</li>
-                            </ul>
-                            <li><b>Methodology + Analysis: </b></li>
-                            <ul>
-                                <li>Use network analyst tool to perform service area analysis based on distance</li>
-                                <li>Outline the trade areas</li>
-                                <li>Load shapefiles for California Major Rivers and Creeks and California Major Lakes and Reservoirs</li>
-                                <li>Add topographic base map and surrounding counties to make chosen county stand out</li>
-                            </ul>
-                            
-                            <li><b>Result:</b></li>
-                            <ul>
-                                <li>polygons that outline that equal competition trade areas</li>
-                            </ul>
-                            <div>
-                                <div class="container text-center">
-                                    <figure class="figure">
-                                    <img class="img-resize rounded" src="./images/project-imgs/fig5-1.jpg" alt="fig5-1.jpg" width="50%">
-                                    </figure>
-                                </div><br><br>
-                                <div class="container text-center">
-                                    <figure class="figure">
-                                    <img class="img-resize rounded" src="./images/project-imgs/fig5-2.jpg" alt="fig5-2.jpg" width="50%">
-                                    </figure>
-                                </div>
-                                <br> <br> 
-                                <div class="container text-center">
-                                    <figure class="figure">
-                                    <img class="img-resize rounded" src="./images/project-imgs/fig5-3.jpg" alt="fig5-3.jpg" width="50%">
-                                    </figure>
-                                </div><br>
-                            </div>
-                        </ul>
-
-                    </ol>
-                </div>
-            </div>
-        </div>
-        
-        
     </div>
 
 
