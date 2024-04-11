@@ -52,10 +52,11 @@
                     <h3><li>Investigating the spatio-temporal patterns of wildfires in California</h3></li> <!-- Project 1-->
                     <i>Using ArcGis</i>
                     <ul>
-                        <li><b>Goal: </b>Find relationship between fire perimeters and bodies of water in Los Anglees County</li>
+                        <li><b>Goal: </b>Find relationship between fire perimeters and bodies of water in Los Angles County</li>
                         <li><b>Datasets Used: </b></li>
                         <ul>
-                            <li>Wildland-Urban Interface 2020 (Census Block-level WUI data of LA County), Fire Perimeter data, California Counties Population Data, Primary Roads in CA</li>
+                            <li>Wildland-Urban Interface 2020 (Census Block-level WUI data of LA County), Fire Perimeter data, California Counties Population 
+                                Data, Primary Roads in CA</li>
                         </ul>
                         <li><b>Methodology + Analysis: </b></li>
                         <ul>
@@ -67,12 +68,48 @@
                         <li><b>Result:</b></li>
                         <ul>
                             <li>Fires do fall along various rivers and creeks in LA but mostly around San Gabriel Mountains</li>
+                            <li>Reasons for these fires near major rivers and reservoirs can be explained through more desert-like terrain in the mountains 
+                                rather than suburban areas.</li>
                         </ul>
+                        <div class="container text-center">
+                            <figure class="figure">
+                            <img class="img-resize rounded" src="./images/project-imgs/RiversAndFiresLA.jpg" alt="riversnfires.jpg">
+                            </figure>
+                        </div><hr>
                     </ul>
-                    <div>
-                        [insert image about investigating spatio-temporal here]
-                    </div><br>
-                    <h3><li>Modeling Tiger Habitats</h3></li> <!-- Project 2-->
+                    <!-- Project 2-->                   <!-- Project 2-->                       <!-- Project 2-->
+                    <h3><li>County of LA's fire perimeter between 2012-2022</h3></li> 
+                    <i>Using ArcGis</i>
+                    <ul>
+                        <li><b>Goal: </b>Find relationship between fire perimeters and bodies of water in Los Angeles County</li>
+                        <li><b>Datasets Used: </b></li>
+                        <ul>
+                            <li>Wildland-Urban Interface 2020 (Census Block-level WUI data of LA County), Fire Perimeter Data, California Counties Population Data, 
+                                Primary Roads in CA</li>
+                        </ul>
+                        <li><b>Methodology + Analysis: </b></li>
+                        <ul>
+                            <li>First to create a choropleth denoting a population by right clicking counties_LA feature > data > export features. Edit the symbology
+                                 > primary symbology : graduated colors > field = POP2020.</li>
+                            <li>Now we want to create the wildfire perimeter layer, just turn on CA_fire_perim layer > change symbology to a different color.</li>
+                            <li>For blocks designated as WUI for counties look through the attribute table of counties_LA > select by attribute and choose Where 
+                                WUIFLAG2020 is not equal to 0 so it is selecting all (1=intermix; 2=interface). </li>
+                        </ul>
+                        <li><b>Result:</b></li>
+                        <ul>
+                            <li>Seems that most fires seem to be in mountainous areas where a lot of people don’t reside in or areas with lots of vegetation</li>
+                            <li>In close zoomed in extent of map, you can see detail of patterning of Wildland-Urban Interface blocks which has to do with the homes 
+                                that interact with undeveloped wildland vegetation at urban and undeveloped areas.</li>
+                            <li>We can also see the majority of WUI blocks are more common in areas with undeveloped land.</li>
+                        </ul>
+                        <div class="container text-center">
+                            <figure class="figure">
+                            <img class="img-resize rounded" src="./images/project-imgs/updated_laFires.jpg" alt="riversnfires.jpg">
+                            </figure>
+                        </div><hr>
+                    </ul>
+                    <!-- Project 3-->                           <!-- Project 3-->                           <!-- Project 3-->
+                    <h3><li>Modeling Tiger Habitats</h3></li> 
                     <i>Using ArcGis</i>
                     <ul>
                         
@@ -111,18 +148,20 @@
                             <li><b>[criterion 5]</b>Mosaic Dataset and add necessary rasters to it → generate slope with slope tool → extract cells w/ slope value less than 30 with Raster Calculator → 
                                 convert raster to polygon → intersect tool with criterion 4 and selected slope polygons</li>
                         </ul>
-                        <div class="container text-center">
-                            <figure class="figure">
-                            <img class="img-resize rounded" src="./images/project-imgs/tiger.jpg" alt="tiger.jpg" width="50%">
-                            </figure>
-                        </div><br>
                         <li><b>Result:</b></li>
                         <ul>
                             <li>25 features meet all 5 criteria. Tigers are found in mixed deciduous forests out of any forests in Thailand due to resources that forests provide which 
                                 can’t be found anywhere else.</li>
                         </ul>
+                        <div class="container text-center">
+                            <figure class="figure">
+                            <img class="img-resize rounded" src="./images/project-imgs/tiger2.jpg" alt="tiger.jpg">
+                            </figure>
+                        </div><hr>
                     </ul>
-                    <h3><li>Trade and Service Area Analysis of Santa Maria County Gas Stations</h3></li> <!--Project 3-->
+
+                    <!--Project 4-->                <!--Project 4-->                          <!--Project 4-->
+                    <h3><li>Trade and Service Area Analysis of Santa Maria County Gas Stations</h3></li> 
                     <i>Using ArcGis</i>
                     <ul>
                         <li><b>Goal: </b>Find equal competition trade areas for gas stations in santa barbara</li>
@@ -142,27 +181,92 @@
                         <li><b>Result:</b></li>
                         <ul>
                             <li>polygons that outline that equal competition trade areas</li>
-                        </ul>
+                        </ul><br>
                         <div>
                             <div class="container text-center">
                                 <figure class="figure">
-                                <img class="img-resize rounded" src="./images/project-imgs/fig5-1.jpg" alt="fig5-1.jpg" width="50%">
+                                    <p class="fs-6 text-decoration-underline"><b>Figure 4.1: Service Area Analysis: Station 21 (Santa Maria)</b></p>
+                                    <img class="img-resize rounded" src="./images/project-imgs/fig4-1.jpg" alt="fig4-1.jpg" width="50%">
+                                    <figcaption class="figure-caption"><b>Fig 4-1 Caption:</b> Service Area analysis around fire station 21 but more specifically 
+                                        Santa Maria with a <br>consideration of a radius of 5000 meters. Also, Station 21 is located around 
+                                        Santa Maria.</figcaption>
                                 </figure>
-                            </div><br><br>
+                            </div><br>
                             <div class="container text-center">
                                 <figure class="figure">
-                                <img class="img-resize rounded" src="./images/project-imgs/fig5-2.jpg" alt="fig5-2.jpg" width="50%">
+                                    <p class="fs-6 text-decoration-underline"><b>Figure 4.2: Network Analysis of Santa Maria to Santa Barbara</b></p>
+                                    <img class="img-resize rounded" src="./images/project-imgs/fig4-2.jpg" alt="fig4-2.jpg" width="50%">
+                                    <figcaption class="figure-caption"><b>Fig 4-2 Caption: </b>Here we have a network analysis of my commute from Santa Maria to Santa Barbara <br>with 
+                                        respect to time, minimizing the time of travel. Location 1 depicts Santa Barbara and location <br>
+                                        2 depicts Santa Maria. </figcaption>
                                 </figure>
-                            </div>
-                            <br> <br> 
+                            </div><br>
                             <div class="container text-center">
                                 <figure class="figure">
-                                <img class="img-resize rounded" src="./images/project-imgs/fig5-3.jpg" alt="fig5-3.jpg" width="50%">
+                                    <p class="fs-6 text-decoration-underline"><b>Figure 4.3: Network Analysis of Santa Maria to Santa Barbara but with barriers</b></p>
+                                    <img class="img-resize rounded" src="./images/project-imgs/fig4-3.jpg" alt="fig4-3.jpg" width="50%">
+                                    <figcaption class="figure-caption"><b>Fig 4-3 Caption: </b>Here we have the network analysis between Santa Barbara and Santa Maria based on distance <br>
+                                        with the presence of a wildfire. There is a detour because I also included a barrier of the CAVE <br>
+                                        wildfire boundary so that it knows to take another route if it crosses that fire boundary. </figcaption>
                                 </figure>
                             </div><br>
                         </div>
-                    </ul>
+                    </ul><hr>
+                    <!--COUNTY OF SANTA BARBARA INTERNSHIP STUFF--> <!--probably change to a separate page or template-->
+                    <h3><li>Work with the County of Santa Barbara Surveyor Office</h3></li> 
+                    <i>Using ArcGis</i>
+                    <ul>
+                        <li><b>Objective: </b>generate shapefiles of indexing polygons, by using techniques that involve tracing the assessor's parcel polygons, <br>
+                            and/or coordinate geometry input registered to the assessor’s parcel polygon basemap.</li><br>
+                        <li><b>Datasets Used:</b></li> <!-- add datasets here-->
 
+                        <li><b>Methodology + Analysis: </b></li>
+                        <ul>
+                            <li class="text-decoration-underline">STEPS TO GEOREFERENCE MAP PARCEL</li>
+                                <ol>
+                                    <li>locate map parcel from excel sheet on surveyor website</li>
+                                    <li>Make sure the data on pdf map matches the excel sheet description</li>
+                                    <li>Find what street intersection and locate it on the map using *select by attribute*</li>
+                                    <li>Measure and make sure it matches the measurements on ArcGIS [feet]</li>
+                                    <li>Now trace and fill polygons for parcels. [edit > create > polygon]</li>
+                                    <li>When done, merge [merge > hit merge on bottom right]</li>
+                                    <li>Make sure to press save in the ribbon and save work and relabel parcel</li>
+                                </ol><br>
+                        </ul>
+                        
+                        <li><b>Result:</b></li>
+                        <ul>
+                            <li>These indexing polygons will be used for joining tabular index information about the recorded map it references 
+                                with a hyperlink to the scanned PDF of the recorded map available online
+                            </li>
+                            <li>
+                                These indexing polygons are then used to improve the completeness of geospatial indexing systems currently in use at the county.
+                            </li>
+                        </ul><br>
+                        <div>
+                            <div class="container text-center">
+                                <figure class="figure">
+                                    <p class="fs-6 text-decoration-underline"><b>Parcel 1: R013/001</b></p>
+                                    <img class="img-resize rounded" src="./images/project-imgs/r013_001Index.jpg" alt="parcel1.jpg" width="50%">
+                                    <figcaption class="figure-caption"><b>Location:</b> Mission Ridge SB County</figcaption>
+                                </figure>
+                            </div><br>
+                            <div class="container text-center">
+                                <figure class="figure">
+                                    <p class="fs-6 text-decoration-underline"><b>Parcel 2: R013/009</b></p>
+                                    <img class="img-resize rounded" src="./images/project-imgs/r013_009Index.jpg" alt="parcel2.jpg" width="55%">
+                                    <figcaption class="figure-caption"><b>Location:</b> Portion of City block A mission addition, survey made by FF Lourney</figcaption>
+                                </figure>
+                            </div><br>
+                            <div class="container text-center">
+                                <figure class="figure">
+                                    <p class="fs-6 text-decoration-underline"><b>Parcel 3: R013/004DR</b></p>
+                                    <img class="img-resize rounded" src="./images/project-imgs/r013_004DRIndex.jpg" alt="parcel3.jpg" width="60%">
+                                    <figcaption class="figure-caption"><b>Location:</b> Survey of lot in Block 85 1/2 SB for Ruby Cargill</figcaption>
+                                </figure>
+                            </div><br>
+                        </div>
+                    </ul><hr>
                 </ol>
             </div>
         </div>
